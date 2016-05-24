@@ -31,11 +31,11 @@ sudo apt-get install -y vim git-core git-extras
 sudo apt-get install -y mosh tmux wget htop curl
 sudo apt-get install -y bash-completion unzip zip
 
-wget -P ~ https://raw.githubusercontent.com/nicolasmccurdy/sane-defaults/master/home/.vimrc
-wget -P ~ https://raw.githubusercontent.com/nicolasmccurdy/sane-defaults/master/home/.gitignore
+wget -P ~ -nc https://raw.githubusercontent.com/nicolasmccurdy/sane-defaults/master/home/.vimrc
+wget -P ~ -nc https://raw.githubusercontent.com/nicolasmccurdy/sane-defaults/master/home/.gitignore
 mkdir ~/.vim  ~/.vim/backup ~/.vim/backupf
 
-wget -P ~ https://raw.githubusercontent.com/sumukh/machina/master/aliases.#!/bin/sh
+wget -P ~ -nc https://raw.githubusercontent.com/sumukh/machina/master/aliases.sh
 
 echo "# Load aliases
 if [ -f ~/.aliases ]; then
