@@ -4,7 +4,7 @@
 
 # Update Apt-Get
 sudo apt-get update;
-sudo apt-get upgrade;
+sudo apt-get -y upgrade;
 
 # Security
 # sudo apt-get install fail2ban;
@@ -28,7 +28,7 @@ sudo -H pip install howdoi
 
 # Utilities
 sudo apt-get install -y vim git-core git-extras
-sudo apt-get install -y mosh tmux wget htop
+sudo apt-get install -y mosh tmux wget htop curl
 sudo apt-get install -y bash-completion unzip zip
 
 wget -P ~ https://raw.githubusercontent.com/nicolasmccurdy/sane-defaults/master/home/.vimrc
