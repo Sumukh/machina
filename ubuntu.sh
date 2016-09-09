@@ -7,8 +7,8 @@ sudo apt-get update;
 sudo apt-get -y upgrade;
 
 # Security
-# sudo apt-get install fail2ban;
-# Automatic Security Updates  (Optional)
+sudo apt-get install fail2ban;
+# Automatic Security Updates  (Optional) 
 # sudo apt-get install unattended-upgrades
 # echo 'APT::Periodic::Update-Package-Lists "1";
 # APT::Periodic::Download-Upgradeable-Packages "1";
