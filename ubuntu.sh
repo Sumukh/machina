@@ -7,7 +7,7 @@ sudo apt-get update;
 sudo apt-get -y upgrade;
 
 # Security
-sudo apt-get install fail2ban;
+sudo apt-get install -y fail2ban;
 # Automatic Security Updates  (Optional) 
 # sudo apt-get install unattended-upgrades
 # echo 'APT::Periodic::Update-Package-Lists "1";
@@ -24,7 +24,7 @@ sudo apt-get install -y python3 python3-dev python3-setuptools python3-dev
 sudo easy_install pip
 sudo -H pip install --upgrade virtualenv;
 sudo -H pip install httpie
-sudo -H pip install howdoi
+# sudo -H pip install howdoi
 
 # Utilities
 sudo apt-get install -y vim git-core git-extras
