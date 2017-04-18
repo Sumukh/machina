@@ -19,10 +19,9 @@ sudo apt-get install -y build-essential
 
 # Python
 sudo apt-get install -y python python-setuptools python-dev
-sudo apt-get install -y python3 python3-dev python3-setuptools python3-dev
-sudo easy_install pip
-sudo -H pip install --upgrade virtualenv;
-sudo -H pip install httpie requests
+sudo apt-get install -y python3 python3-dev python3-setuptools python3-dev python3-pip
+sudo -H pip3 install --upgrade virtualenv;
+sudo -H pip3 install httpie requests
 
 # Utilities
 sudo apt-get install -y vim git-core git-extras
