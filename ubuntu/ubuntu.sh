@@ -32,7 +32,7 @@ wget -P ~ -nc https://raw.githubusercontent.com/nicolasmccurdy/sane-defaults/mas
 wget -P ~ -nc https://raw.githubusercontent.com/nicolasmccurdy/sane-defaults/master/home/.gitignore
 mkdir ~/.vim  ~/.vim/backup ~/.vim/backupf
 
-wget -P ~ -nc https://raw.githubusercontent.com/sumukh/machina/master/aliases.sh -O .aliases
+wget -P ~ -nc https://raw.githubusercontent.com/sumukh/machina/master/ubuntu/aliases.sh -O .aliases
 
 echo "# Load aliases
 if [ -f ~/.aliases ]; then
