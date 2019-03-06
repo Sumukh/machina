@@ -45,6 +45,9 @@ if [ -f '~/.vimrc' ]; then
     mv ~/.vimrc ~/.vimrc.bak;
 fi
 ln -s $CURR_DIR/vim/vimrc ~/.vimrc
+mkdir -p ~/.vim/backups
+mkdir -p ~/.vim/backup
+mkdir -p ~/.vim/backupf
 
 if [ -f '~/.gitconfig' ]; then
     mv ~/.gitconfig ~/.gitconfig.bak
