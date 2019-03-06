@@ -17,7 +17,7 @@ source fonts/install.sh
 
 # Setup ZSH
 
-read -p "Setup ZSH (yes/no)? Reccomended "
+read -p "Setup ZSH (yes/no)? (Reccomended response: yes) : "
 if [ "$REPLY" != "yes" ]; then
   echo "Not setting up ZSH"
 else
@@ -29,7 +29,7 @@ else
     ln -s $CURR_DIR/zsh/fasd.zsh ~/.oh-my-zsh/custom/fasd.zsh
     ln -s $CURR_DIR/zsh/zzz_custom.zsh ~/.oh-my-zsh/custom/zzz_custom.zsh
 fi
-echo "Import $CURR_DIR/iTerm2/machina.json as your default iTerm Profile"
+echo "In iTerm2, import $CURR_DIR/iTerm2/machina.json as your default iTerm Profile to get the right color settings"
 
 # iTerm Color Profile
 
@@ -80,15 +80,14 @@ if [ "$REPLY" != "yes" ]; then
     echo "Not running SSH KEY"
 else
    read -p "What is your full name: "
-   git config --local user.name $REPLY
+   git config --global user.name $REPLY
    read -p "Your git email: "
-   git config --local user.email $REPLY
+   git config --global user.email $REPLY
    echo "When you're prompted to 'Enter a file in which to save the key' press Enter"
    ssh-keygen -t rsa -b 4096 -C $REPLY
    open "https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent"
    echo "Heres the key you add to github:"
-   echo "---- begin ----"
+   echo "---- Here's your key. It has also been copied to your clipboard ----"
    cat ~/.ssh/id_rsa.pub
-   echo "--- ^ end ^ ----"
 fi
 
