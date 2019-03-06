@@ -198,3 +198,10 @@ alias d='fasd -d' # directory
 alias f='fasd -f' # file
 alias z='fasd_cd -d' # cd, same functionality as j in autojump
 alias zz='fasd_cd -d -i' # interactive directory jump
+
+# Dev Environment 
+alias dkc='docker-compose'
+alias dc='docker-compose'
+alias dtest='docker-compose run --rm app bundle exec ruby -I test'
+alias dlogs='docker-compose logs -f --tail=20'
+alias aws-list-prod-web-ip='aws --profile prod-us-west-1 --region us-west-1 ec2 describe-instances --filters "Name=tag:stack,Values=pr'
