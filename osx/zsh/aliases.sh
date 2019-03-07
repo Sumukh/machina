@@ -23,13 +23,9 @@ alias cls='clear;ls'
 alias df='df -h'
 alias du='du -h -d 2'
 
-if [[ $platform == 'linux' ]]; then
-  alias ll='ls -alh --color=auto'
-  alias ls='ls --color=auto'
-elif [[ $platform == 'darwin' ]]; then
-  alias ll='ls -alGh'
-  alias ls='ls -Gh'
-fi
+alias ll='ls -alGh'
+alias ls='ls -Gh'
+alias sl='ls -Gh'
 
 # show me files matching "ls grep"
 alias lsg='ll | grep'
@@ -39,11 +35,11 @@ alias ar='source ~/.aliases'  #alias reload
 alias gar="killall -HUP -u \"$USER\" zsh"  #global alias reload
 
 # vim using
-mvim --version > /dev/null 2>&1
-MACVIM_INSTALLED=$?
-if [ $MACVIM_INSTALLED -eq 0 ]; then
-  alias vim="mvim -v"
-fi
+# mvim --version > /dev/null 2>&1
+# MACVIM_INSTALLED=$?
+# if [ $MACVIM_INSTALLED -eq 0 ]; then
+#   alias vim="mvim -v"
+# fi
 
 # mimic vim functions
 alias :q='exit'

@@ -97,6 +97,8 @@ alias gbb='git bisect bad'
 alias less='less -r'
 alias tf='tail -f'
 alias l='less'
+alias l='less'
+alias sl='ls' #  apt-get install sl if you want to force yourself to type ls everytime
 alias lh='ls -alt | head' # see the last modified files
 alias screen='TERM=screen screen'
 alias cl='clear'

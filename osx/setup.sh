@@ -5,7 +5,7 @@ CURR_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 brew install git
 
 brew cask install alfred google-chrome iterm2 1password visual-studio-code spotify slack sequel-pro docker tunnelblick spectacle
-brew install zsh tmux ctags git hub reattach-to-user-namespace the_silver_searcher ghi python3 wget
+brew install zsh tmux ctags git hub reattach-to-user-namespace the_silver_searcher ghi python3 wget watch
 
 # brew cask install macvim --with-override-system-vim --with-lua --with-luajit
 
