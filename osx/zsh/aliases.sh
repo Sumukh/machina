@@ -64,6 +64,8 @@ alias gsh='git show'
 alias gshw='git show'
 alias gshow='git show'
 alias gi='vim .gitignore'
+alias gc='git commit'
+alias gcam='git commit -am'
 alias gcm='git ci -m'
 alias gcim='git ci -m'
 alias gci='git ci'
@@ -101,9 +103,10 @@ alias gpub='grb publish'
 alias gtr='grb track'
 alias gpl='git pull'
 alias gplr='git pull --rebase'
-alias gps='git push'
 alias gpol='git pull origin master'
+alias gpor='git pull origin master --rebase'
 alias gpsopm='git push origin master'
+alias gps='git push'
 alias gpsh='git push'
 alias gnb='git nb' # new branch aka checkout -b
 alias grs='git reset'
@@ -131,7 +134,7 @@ alias cl='clear'
 alias gz='tar -zcvf'
 
 # Ruby
-alias mc='make console' 
+alias mc='make console'
 alias c='rails c' # Rails 3+
 alias co='script/console' # Rails 2
 alias cod='script/console --debugger'
@@ -160,6 +163,10 @@ alias srdm='spring rake db:migrate'
 alias srdt='spring rake db:migrate'
 alias srdmt='spring rake db:migrate db:test:prepare'
 
+# Search
+alias ff='ag' # fast find
+alias fname='find . -type f -iname ' # find by name
+
 #Custom Alias
 alias vm='ssh vagrant@127.0.0.1 -p 2222'
 alias hdi='howdoi'
@@ -173,6 +180,15 @@ alias hsw='howdoi swift'
 alias m='mosh'
 alias serve='python3 -m http.server'
 alias k='kubectl'
+alias va='source env/bin/activate'
+alias venv='source venvt/bin/activate'
+alias mkvenv='python3 -m venv venv'
+
+# Rsync
+alias rsync-copy="rsync -avz --progress -h"
+alias rsync-move="rsync -avz --progress -h --remove-source-files"
+alias rsync-update="rsync -avzu --progress -h"
+alias rsync-synchronize="rsync -avzu --delete --progress -h"
 
 # tmux
 alias ta='tmux attach -t'
@@ -199,7 +215,7 @@ alias f='fasd -f' # file
 alias z='fasd_cd -d' # cd, same functionality as j in autojump
 alias zz='fasd_cd -d -i' # interactive directory jump
 
-# Dev Environment 
+# Dev Environment
 alias dkc='docker-compose'
 alias dc='docker-compose'
 alias dtest='docker-compose run --rm app bundle exec ruby -I test'

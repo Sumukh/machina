@@ -37,6 +37,8 @@ alias gsh='git show'
 alias gshw='git show'
 alias gshow='git show'
 alias gi='vim .gitignore'
+alias gc='git commit'
+alias gcam='git commit -am'
 alias gcm='git ci -m'
 alias gcim='git ci -m'
 alias gci='git ci'
@@ -73,9 +75,11 @@ alias gtr='grb track'
 alias gpl='git pull'
 alias gplr='git pull --rebase'
 alias gps='git push'
-alias gpol='git pull origin master'
-alias gpsopm='git push origin master'
+alias gpom='git pull origin master'
+alias gpoml='git pull origin master'
+alias gpomr='git pull origin master --rebase'
 alias gpsh='git push'
+alias gpsopm='git push origin master'
 alias gnb='git nb' # new branch aka checkout -b
 alias grs='git reset'
 alias grsh='git reset --hard'
@@ -101,14 +105,10 @@ alias cl='clear'
 alias gz='tar -zcvf'
 
 # Ruby
-alias c='rails c' # Rails 3
+alias c='rails c' # Rails 3+
 alias co='script/console' # Rails 2
 alias cod='script/console --debugger'
 
-#If you want your thin to listen on a port for local VM development
-#export VM_IP=10.0.0.1 <-- your vm ip
-alias ts='thin start -a ${VM_IP:-127.0.0.1}'
-alias ms='mongrel_rails start'
 alias tfdl='tail -f log/development.log'
 alias tftl='tail -f log/test.log'
 
@@ -121,7 +121,13 @@ alias sgi='sudo gem install --no-ri --no-rdoc'
 # Forward port 80 to 3000
 alias portforward='sudo ipfw add 1000 forward 127.0.0.1,3000 ip from any to any 80 in'
 
-#Custom Alias
+# Rsync
+alias rsync-copy="rsync -avz --progress -h"
+alias rsync-move="rsync -avz --progress -h --remove-source-files"
+alias rsync-update="rsync -avzu --progress -h"
+alias rsync-synchronize="rsync -avzu --delete --progress -h"
+
+#Custom Aliases
 alias hdi='howdoi'
 alias h='howdoi'
 alias hjs='howdoi javascript'
