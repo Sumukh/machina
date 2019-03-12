@@ -112,6 +112,8 @@
   autocrlf = false
   editor = vim
   excludesfile = ~/.gitignore
+[pager]
+   branch = false
 [advice]
   statusHints = false
 [diff]
