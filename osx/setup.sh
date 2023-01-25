@@ -4,12 +4,20 @@
 
 CURR_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/sumukh/.zprofile
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/sumukh/.zprofile
+echo '# Set PATH, MANPATH, etc., for Homebrew.' >> ~/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 brew install --cask alfred google-chrome iterm2 1password visual-studio-code spotify slack sequel-pro docker spectacle zoom notion bartender clocker tunnelblick tailscale
 brew install zsh tmux ctags git hub reattach-to-user-namespace the_silver_searcher ghi wget watch dockutil
+
+brew install ruby-install ruby-build rbenv rvm nvm yarn redis
+
+echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.zprofile
+echo '[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm'    >> ~/.zprofile
+echo '[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion'  >> ~/.zprofile
+echo 'eval "$(rbenv init - zsh)"' >> ~/.zprofile
+# bundle config set force_ruby_platform true
 
 # brew cask install macvim --with-override-system-vim --with-lua --with-luajit
 
@@ -56,7 +64,7 @@ mkdir -p ~/.vim/backupf
 if [ -f '~/.gitconfig' ]; then
     mv ~/.gitconfig ~/.gitconfig.bak
 fi
-ln -s $CURR_DIR/git/gitconfig ~/.gitconfig
+cp $CURR_DIR/git/gitconfig ~/.gitconfig
 
 if [ -f '~/.gitignore' ]; then
     mv ~/.gitignore ~/.gitignore.bak
@@ -85,3 +93,4 @@ if [ "$REPLY" != "yes" ]; then
 else
    ./setup-github.sh
 fi
+
