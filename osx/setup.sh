@@ -1,13 +1,15 @@
 #!/bin/sh
 
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 CURR_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-brew install git
+echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/sumukh/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/sumukh/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
-brew cask install alfred google-chrome iterm2 1password visual-studio-code spotify slack sequel-pro docker tunnelblick spectacle
-brew install zsh tmux ctags git hub reattach-to-user-namespace the_silver_searcher ghi python3 wget watch
+brew install --cask alfred google-chrome iterm2 1password visual-studio-code spotify slack sequel-pro docker spectacle zoom notion bartender clocker tunnelblick tailscale
+brew install zsh tmux ctags git hub reattach-to-user-namespace the_silver_searcher ghi wget watch dockutil
 
 # brew cask install macvim --with-override-system-vim --with-lua --with-luajit
 
@@ -81,15 +83,5 @@ read -p "Setup new SSH key (yes/no)? (Reccomended response: yes) : "
 if [ "$REPLY" != "yes" ]; then
     echo "Not running SSH KEY"
 else
-   read -p "What is your full name: "
-   git config --global user.name $REPLY
-   read -p "Your git email: "
-   git config --global user.email $REPLY
-   echo "When you're prompted to 'Enter a file in which to save the key' press Enter"
-   ssh-keygen -t rsa -b 4096 -C $REPLY
-   open "https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent"
-   echo "Heres the key you add to github:"
-   echo "---- Here's your key. It has also been copied to your clipboard ----"
-   cat ~/.ssh/id_rsa.pub
+   ./setup-github.sh
 fi
-
