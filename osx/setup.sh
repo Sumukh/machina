@@ -8,10 +8,10 @@ echo '# Set PATH, MANPATH, etc., for Homebrew.' >> ~/.zprofile
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-brew install --cask alfred google-chrome iterm2 1password visual-studio-code spotify slack tableplus docker spectacle zoom notion bartender clocker tunnelblick tailscale quiver
+brew install --cask alfred google-chrome iterm2 1password visual-studio-code spotify slack tableplus docker spectacle zoom notion bartender clocker tunnelblick tailscale
 brew install zsh tmux ctags git hub reattach-to-user-namespace the_silver_searcher ghi wget watch dockutil
 
-brew install ruby-install ruby-build rbenv rvm nvm yarn redis
+brew install ruby-install ruby-build rbenv nvm yarn redis
 
 echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.zprofile
 echo '[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm'    >> ~/.zprofile
